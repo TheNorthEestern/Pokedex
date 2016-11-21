@@ -12,6 +12,7 @@
 		AFA6C95F1DE2B44F00E551F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA6C95D1DE2B44F00E551F3 /* Main.storyboard */; };
 		AFA6C9611DE2B44F00E551F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA6C9601DE2B44F00E551F3 /* Assets.xcassets */; };
 		AFA6C9641DE2B44F00E551F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA6C9621DE2B44F00E551F3 /* LaunchScreen.storyboard */; };
+		AFA6C96C1DE2BF1C00E551F3 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = AFA6C96B1DE2BF1C00E551F3 /* pokemon.csv */; };
 		F51040CB7492EEEE13581233 /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B235149F01C607A80EEC9F4 /* Pods_Pokedex.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		AFA6C9601DE2B44F00E551F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFA6C9631DE2B44F00E551F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFA6C9651DE2B44F00E551F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFA6C96B1DE2BF1C00E551F3 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		AFA6C9581DE2B44F00E551F3 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				AFA6C96D1DE2BF2100E551F3 /* Data */,
 				AFA6C9591DE2B44F00E551F3 /* AppDelegate.swift */,
 				AFA6C95B1DE2B44F00E551F3 /* ViewController.swift */,
 				AFA6C95D1DE2B44F00E551F3 /* Main.storyboard */,
@@ -69,6 +72,14 @@
 				AFA6C9651DE2B44F00E551F3 /* Info.plist */,
 			);
 			path = Pokedex;
+			sourceTree = "<group>";
+		};
+		AFA6C96D1DE2BF2100E551F3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AFA6C96B1DE2BF1C00E551F3 /* pokemon.csv */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		DB959B821E03851F531D9365 /* Frameworks */ = {
@@ -153,6 +164,7 @@
 			files = (
 				AFA6C9641DE2B44F00E551F3 /* LaunchScreen.storyboard in Resources */,
 				AFA6C9611DE2B44F00E551F3 /* Assets.xcassets in Resources */,
+				AFA6C96C1DE2BF1C00E551F3 /* pokemon.csv in Resources */,
 				AFA6C95F1DE2B44F00E551F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +389,7 @@
 				AFA6C96A1DE2B44F00E551F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
