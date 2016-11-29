@@ -30,7 +30,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geometry2" translatesAutoresizingMaskIntoConstraints="NO" id="q4b-aF-Pnh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="congruent_outline" translatesAutoresizingMaskIntoConstraints="NO" id="q4b-aF-Pnh">
                                 <rect key="frame" x="0.0" y="109" width="375" height="558"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjG-nF-4zZ">
@@ -148,6 +148,6 @@ U2VhcmNoIFBvaxDDqW1vbg
     </scenes>
     <resources>
         <image name="4" width="120" height="120"/>
-        <image name="geometry2" width="400" height="400"/>
+        <image name="congruent_outline" width="300" height="300"/>
     </resources>
 </document>

@@ -13,6 +13,11 @@ class PokeCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel : UILabel!
     var cellPokemon: Pokemon!
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        layer.cornerRadius = 5.0
+    }
+    
     func configureCell(modelPokemon: Pokemon) {
         cellPokemon = modelPokemon
         nameLabel.text = cellPokemon.name.capitalized

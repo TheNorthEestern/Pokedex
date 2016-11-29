@@ -20,6 +20,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
+            let pokemon = Pokemon(name: "# \(indexPath.row)", pokedexId: indexPath.row)
+            cell.configureCell(modelPokemon: pokemon)
             return cell
         } else {
             return UICollectionViewCell()
@@ -31,7 +33,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 400;
+        return 152;
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -39,7 +41,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 125, height: 125)
+        return CGSize(width: 105, height: 105)
     }
 
 }
