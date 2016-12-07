@@ -19,11 +19,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNeedsStatusBarAppearanceUpdate()
         collection.dataSource = self
         collection.delegate = self
         searchBar.delegate = self
         searchBar.returnKeyType = .done
         parsePokemonCSV()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func parsePokemonCSV() {
@@ -60,7 +65,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Implement method
+        var poke: Pokemon!
+        if inSearchMode {
+            poke = filteredPokemon[indexPath.row]
+        } else {
+            poke = pokemon[indexPath.row]
+        }
+        
+        performSegue(withIdentifier: "PokemonDetailViewController", sender: poke)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -94,6 +106,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 $0.name.range(of: lower) != nil
             })
             collection.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PokemonDetailViewController" {
+            if let detailsViewController = segue.destination as? PokemonDetailViewController {
+                if let poke = sender as? Pokemon {
+                    detailsViewController.pokemon = poke
+                }
+            }
         }
     }
 }

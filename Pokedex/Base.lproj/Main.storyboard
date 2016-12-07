@@ -140,11 +140,49 @@ U2VhcmNoIFBvaxDDqW1vbg
                     <connections>
                         <outlet property="collection" destination="3Mb-z3-sWJ" id="7Cu-5f-wIa"/>
                         <outlet property="searchBar" destination="bfW-rB-EFE" id="r7T-Kc-3XN"/>
+                        <segue destination="kHV-QU-5ah" kind="show" identifier="PokemonDetailViewController" id="Axu-T9-95P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="125.59999999999999" y="137.18140929535232"/>
+            <point key="canvasLocation" x="140" y="130"/>
+        </scene>
+        <!--Pokemon Detail View Controller-->
+        <scene sceneID="HbK-Ah-5fs">
+            <objects>
+                <viewController id="kHV-QU-5ah" customClass="PokemonDetailViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZCW-4I-LxY"/>
+                        <viewControllerLayoutGuide type="bottom" id="wpP-p9-hxl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uaz-wg-cLb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4I-d3-XpO">
+                                <rect key="frame" x="123" y="318" width="128" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="TsM-rJ-KbT"/>
+                                    <constraint firstAttribute="height" constant="49" id="bVU-p7-sIy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ThinPixel-7" family="Thin Pixe-l7" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d4I-d3-XpO" firstAttribute="centerY" secondItem="Uaz-wg-cLb" secondAttribute="centerY" constant="9" id="RTH-at-Tik"/>
+                            <constraint firstItem="d4I-d3-XpO" firstAttribute="centerX" secondItem="Uaz-wg-cLb" secondAttribute="centerX" id="jtR-xE-bQv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="d4I-d3-XpO" id="9pG-eJ-oB7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agm-yI-7Ug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045.5999999999999" y="129.98500749625188"/>
         </scene>
     </scenes>
     <resources>
