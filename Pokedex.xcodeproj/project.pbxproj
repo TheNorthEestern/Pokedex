@@ -19,6 +19,7 @@
 		AFA6C9701DE2C1CE00E551F3 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6C96F1DE2C1CE00E551F3 /* Pokemon.swift */; };
 		AFC3ABFD1DF3E558007637CE /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3ABFC1DF3E558007637CE /* csv.swift */; };
 		AFCAE6911DF7AA7000E730A0 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAE6901DF7AA7000E730A0 /* PokemonDetailViewController.swift */; };
+		AFCAE6931DF7BEBB00E730A0 /* CLTypingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAE6921DF7BEBB00E730A0 /* CLTypingLabel.swift */; };
 		F51040CB7492EEEE13581233 /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B235149F01C607A80EEC9F4 /* Pods_Pokedex.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		AFA6C96F1DE2C1CE00E551F3 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		AFC3ABFC1DF3E558007637CE /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		AFCAE6901DF7AA7000E730A0 /* PokemonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewController.swift; sourceTree = "<group>"; };
+		AFCAE6921DF7BEBB00E730A0 /* CLTypingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTypingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				AFC3ABFC1DF3E558007637CE /* csv.swift */,
+				AFCAE6921DF7BEBB00E730A0 /* CLTypingLabel.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				AF2AFD531DE93DC000E4352E /* PokeCell.swift in Sources */,
 				AFA6C95C1DE2B44F00E551F3 /* ViewController.swift in Sources */,
 				AFA6C95A1DE2B44F00E551F3 /* AppDelegate.swift in Sources */,
+				AFCAE6931DF7BEBB00E730A0 /* CLTypingLabel.swift in Sources */,
 				AFA6C9701DE2C1CE00E551F3 /* Pokemon.swift in Sources */,
 				AFC3ABFD1DF3E558007637CE /* csv.swift in Sources */,
 				AFCAE6911DF7AA7000E730A0 /* PokemonDetailViewController.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 class PokemonDetailViewController: UIViewController {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameLabel: CLTypingLabel!
     var pokemon: Pokemon!
     
     override func viewDidLoad() {
