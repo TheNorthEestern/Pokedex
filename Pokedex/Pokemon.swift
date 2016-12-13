@@ -9,6 +9,10 @@
 class Pokemon {
     private var _name: String!
     private var _pokedexId: Int!
+    private var _description: String!
+    private var _type : String!
+    private var _height: String!
+    private var _weight: String!
     
     var name: String {
         return _name

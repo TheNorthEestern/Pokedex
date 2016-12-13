@@ -12,6 +12,11 @@ class PokemonDetailViewController: UIViewController {
 
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var nameLabel: CLTypingLabel!
+    @IBOutlet weak var descriptionLabel: CLTypingLabel!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var pokedexIdLabel: UILabel!
     var pokemon: Pokemon!
     
     override func viewDidLoad() {
