@@ -14,6 +14,22 @@ class Pokemon {
     private var _height: String!
     private var _weight: String!
     
+    var description: String {
+        return _description
+    }
+    
+    var type: String {
+        return _type
+    }
+    
+    var height: String {
+        return _height
+    }
+    
+    var weight: String {
+        return _weight
+    }
+    
     var name: String {
         return _name
     }
