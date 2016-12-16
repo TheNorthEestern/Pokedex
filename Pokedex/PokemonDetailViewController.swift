@@ -23,9 +23,17 @@ class PokemonDetailViewController: UIViewController {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
         nameLabel.text = pokemon.name.capitalized
+        pokedexIdLabel.text = "# \(pokemon.pokedexId)"
         pokemonImage.image = UIImage(named: "\(pokemon.pokedexId)")
-
-        // Do any additional setup after loading the view.
+        pokemon.downloadPokemonDetails() {
+            self.updateUI()
+        }
+    }
+    
+    func updateUI() {
+        heightLabel.text = pokemon.height
+        weightLabel.text = pokemon.weight
+        typeLabel.text = pokemon.computedType
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
