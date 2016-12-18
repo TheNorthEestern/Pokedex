@@ -18,6 +18,9 @@ class Pokemon {
     private var _weight: String!
     private var _pokemonURL: String!
     var description: String {
+        if _description == nil {
+            _description = "Finding description...t"
+        }
         return _description
     }
     
@@ -64,16 +67,43 @@ class Pokemon {
                     self._height = height
                 }
                 
-                if let types = dict["types"] as? [Dictionary<String, String>] {
+                if let types = dict["types"] as? [Dictionary<String, String>], types.count > 0 {
                     for (index, type) in types.enumerated() {
-                        print(type["name"]!)
                         self._computedType = self._computedType! + (type["name"]?.capitalized)!
                         if index < types.count - 1 {
-                            print(index, types.count)
                             self._computedType = self._computedType + "/"
                         }
                     }
                     self._computedType = self._computedType + " Pokemon"
+                } else {
+                    self._computedType = "No type data found."
+                }
+                
+                if let descArr = dict["descriptions"] as? [Dictionary<String, String>] , descArr.count > 0 {
+                    
+                    if let url = descArr[0]["resource_uri"] {
+                        
+                        let descURL = "\(URL_BASE)\(url)"
+                        
+                        Alamofire.request(descURL).responseJSON(completionHandler: { (response) in
+                            
+                            if let descDict = response.result.value as? Dictionary<String, AnyObject> {
+                                
+                                if let description = descDict["description"] as? String {
+                                    
+                                    let newDescription = description.replacingOccurrences(of: "POKMON", with: "Pokemon")
+                                    
+                                    self._description = newDescription
+                                    print(newDescription)
+                                }
+                            }
+                            
+                            completed()
+                        })
+                    }
+                } else {
+                    
+                    self._description = ""
                 }
             }
             completed()
