@@ -19,7 +19,7 @@ class Pokemon {
     private var _pokemonURL: String!
     var description: String {
         if _description == nil {
-            _description = "Finding description...t"
+            _description = "Finding description..."
         }
         return _description
     }
